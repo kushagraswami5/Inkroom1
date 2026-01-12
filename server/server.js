@@ -13,7 +13,8 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-  origin: "http://localhost:5173"
+  origin: "http://localhost:5173",
+  "https://inkroom1.vercel.app"
 }))
 
 app.use(express.json())
@@ -33,3 +34,4 @@ app.use("/api/admin", adminAuthRoutes)
 app.use("/api/artist", artistOnboardingRoutes)
 
 app.listen(5000, () => console.log("Server running on 5000"))
+
